@@ -3,7 +3,6 @@ import MainScreen from './Pages/MainScreen';
 import { ThemeProvider } from 'styled-components';
 import Styles from './Styles';
 import vars from './Styles/VarsStyles';
-import Header from './Components/Header';
 
 const AppRouter = () => {
   return (
