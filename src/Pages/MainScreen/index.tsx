@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ContactButton from "../../Components/ContactButton";
-import Header from "../../Components/Header";
 
 const MainBackground = styled.main`
   width: 100%;
