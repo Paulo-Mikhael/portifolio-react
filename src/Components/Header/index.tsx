@@ -124,7 +124,7 @@ const Header = () => {
   const [selectedRoute, setSelectedRoute] = useState([...Routes]);
   const location = useLocation();
 
-  function changeSelected(targetName: String){
+  function changeSelected(targetName: string){
     setSelectedRoute(previous => previous.map(item => ({
       ...item, selected: item.name === targetName ? true : false
     })));

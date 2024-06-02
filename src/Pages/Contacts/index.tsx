@@ -65,6 +65,12 @@ const FormContainer = styled.span`
           a{
             text-decoration: none;
             color: #9b2626;
+            margin-left: 7px;
+            transition: all .2s;
+
+            &:hover{
+              color: ${props => props.theme.colors.grayTwo};
+            }
           }
         }
         input, textarea{
@@ -75,6 +81,7 @@ const FormContainer = styled.span`
           border-radius: 5px;
           position: relative;
           z-index: 1;
+          transition: all .3s;
 
           &:focus{
             outline: none;
@@ -183,29 +190,44 @@ const Contacts = () => {
     {
       name: 'Whatsapp',
       classes: 'fa-brands fa-whatsapp',
-      path: ''
+      path: 'https://wa.me/5592992813253?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20oferta...'
     },
     {
       name: 'Instagram',
       classes: 'fa-brands fa-instagram',
-      path: ''
+      path: 'https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA%3D%3D'
     },
     {
       name: 'Linkedin',
       classes: 'fa-brands fa-linkedin-in',
-      path: ''
+      path: 'https://www.linkedin.com/in/paulo-miguel-4b706022b/'
     },
     {
       name: 'Phone',
       classes: 'fa-solid fa-phone',
-      path: ''
+      path: 'https://wa.me/5592992813253?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20oferta...'
     },
     {
       name: 'Github',
       classes: 'fa-brands fa-github',
-      path: ''
+      path: 'https://github.com/Paulo-Mikhael'
     },
   ]
+  function copyText(texto: string) {
+    const elementoTemporario = document.createElement('textarea');
+    elementoTemporario.value = texto;
+    
+    document.body.appendChild(elementoTemporario);
+    
+    elementoTemporario.select();
+    elementoTemporario.setSelectionRange(0, 99999);
+    
+    document.execCommand('copy');
+    
+    document.body.removeChild(elementoTemporario);
+    
+    alert(`'${texto}'` + ' copiado para a área de transferência!');
+  }
 
   return (
     <StyledSection>
@@ -217,7 +239,10 @@ const Contacts = () => {
           <div id="form-content">
             <form method="POST" action="https://formsubmit.co/paulomiguel11111971@gmail.com" encType="multipart/form-data">
               <h1 id="form-title">
-                Me mande uma mensagem por <a href=""><abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr></a>!
+                Me mande uma mensagem por 
+                <a href="" onClick={() => copyText('afsdasd')}>
+                  <abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr>
+                </a>!
               </h1>
               <input required autoFocus={true} tabIndex={1} type="text" name="name" id="text-input" placeholder="Seu nome" />
               <input required tabIndex={2} type="email" name="email" id="email-input" placeholder="Seu email" />
@@ -226,12 +251,12 @@ const Contacts = () => {
               <textarea required tabIndex={3} name="message" id="message-box" placeholder="Escreva uma mensagem"></textarea>
               <ContactOptions>
                 {contacts.map(contact => (
-                  <Link to={contact.path}>
+                  <Link target="_blank" to={contact.path}>
                     <i className={contact.classes} />
                   </Link>
                 ))}
               </ContactOptions>
-              <ContactButton type="submit" width="270px">
+              <ContactButton type="submit" width="270px" link="">
                 Mandar mensagem
               </ContactButton>
             </form>
