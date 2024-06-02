@@ -4,8 +4,8 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   background-color: ${props => props.theme.colors.mainRed};
   padding: 10px;
-  width: 160px;
-  height: 50px;
+  width: 155px;
+  height: 45px;
   border: none;
   border-radius: 3px;
   cursor: pointer;

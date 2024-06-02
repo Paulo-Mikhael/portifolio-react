@@ -37,9 +37,11 @@ const MainContent = styled.div`
     }
   }
 `
-
 const Destaque = styled.b`
   color: ${props => props.theme.colors.mainRed};
+`
+const Blank = styled.div`
+  height: 80px;
 `
 
 const MainScreen = () => {
@@ -47,7 +49,7 @@ const MainScreen = () => {
     <MainBackground>
       <Filter />
       <MainContent>
-        <Header />
+        <Blank />
         <div>
           <h1>
             Bem Vindo! Junte-se a mim e Torne <Destaque>Seu Projeto Realidade</Destaque>

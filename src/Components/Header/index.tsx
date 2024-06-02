@@ -1,17 +1,29 @@
 import styled from "styled-components"
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 const StyledHeader = styled.header`
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 30px;
+  position: absolute;
+  z-index: 2;
 
   #header-image {
     cursor: pointer;
     width: 65px;
     height: 70px;
   }
+`
+const HeaderContent = styled.div`
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 const PerfilMessage = styled.div`
   height: 100%;
@@ -49,15 +61,15 @@ const HeaderBar = styled.div`
     position: relative;
     font-size: 23px;
 
-    &[href=""], &[href="/"] {
+    &.selected {
       color: ${props => props.theme.colors.mainRed};
       font-weight: bold;
+      font-size: 26px;
 
       &:hover {
         color: white;
       }
     }
-
     &:hover {
       color: ${props => props.theme.colors.mainRed};
     }
@@ -88,50 +100,61 @@ const HeaderBar = styled.div`
 const Routes = [
   {
     name: 'Home',
-    path: '/'
+    path: '/',
+    selected: true
   },
   {
     name: 'Sobre mim',
-    path: '/aboutme'
+    path: '/aboutme',
+    selected: false
   },
   {
     name: 'Projetos',
-    path: '/projects'
+    path: '/projects',
+    selected: false
   },
   {
     name: 'Contatos',
-    path: '/contacts'
+    path: '/contacts',
+    selected: false
   }
 ]
 
 const Header = () => {
   return (
     <StyledHeader>
-      <PerfilMessage>
-        <div className="line-one">
-          <img src="Icons/code-icon-white.png" alt="code icon" />
-          <h2>
-            Paulo Miguel
-          </h2>
-        </div>
-        <div className="line-two">
-          <p className="letter-spacing">
-            Web Developer
-          </p>
-        </div>
-      </PerfilMessage>
-      <HeaderBar>
-        {Routes.map(item => (
-          <h2 className="text-weight">
-            <a href={item.path}>
-              {item.name}
-            </a>
-          </h2>
-        ))}
-        <abbr title="Mudar o idioma para português">
-          <img src="Images/brazil.png" alt="brazil flag button to change language" id="header-image" />
-        </abbr>
-      </HeaderBar>
+      <HeaderContent>
+        <PerfilMessage>
+          <div className="line-one">
+            <img src="Icons/code-icon-white.png" alt="code icon" />
+            <h2>
+              Paulo Miguel
+            </h2>
+          </div>
+          <div className="line-two">
+            <p className="letter-spacing">
+              Web Developer
+            </p>
+          </div>
+        </PerfilMessage>
+        <HeaderBar>
+          {Routes.map((item, index) => (
+            <h2 key={index}>
+              <Link
+                to={item.path} className={item.selected === true ? 'selected' : 'text-weight'} 
+                onClick={() => {
+                  item.selected = true
+                }}
+              >
+                {item.name}
+              </Link>
+            </h2>
+          ))}
+          <abbr title="Mudar o idioma para português">
+            <img src="Images/brazil.png" alt="brazil flag button to change language" id="header-image" />
+          </abbr>
+        </HeaderBar>
+      </HeaderContent>
     </StyledHeader>
   );
 }

@@ -9,25 +9,23 @@ const GlobalStyles = createGlobalStyle`
     color: white;
   }
   h1{
-    font-size: 49px;
+    font-size: 45px;
   }
   h2{
     font-size: 40px;
     font-weight: bold;
   }
-  p, .text-weight{
-    font-size: 20px;
+  h3{
+    font-size: 36px;
+    font-weight: bold;
+  }
+  p, .text-weight, h4{
+    font-size: 18px;
     font-weight: 300;
   }
   .letter-spacing{
     letter-spacing: 5px;
     font-size: 19px;
-  }
-  .line{
-    width: 100px;
-    height: 5px;
-    background-color: var(--red);
-    border-radius: 10px;
   }
 `
 
