@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
   position: absolute;
   z-index: 2;
 
@@ -64,7 +64,7 @@ const HeaderBar = styled.div`
     &.selected {
       color: ${props => props.theme.colors.mainRed};
       font-weight: bold;
-      font-size: 26px;
+      font-size: 24px;
 
       &:hover {
         color: white;
@@ -92,7 +92,7 @@ const HeaderBar = styled.div`
       width: 100%;
     }
     &:active:after {
-      top: calc(100% - 3px);
+      top: calc(100%);
       background-color: white;
     }
   }
@@ -121,6 +121,21 @@ const Routes = [
 ]
 
 const Header = () => {
+  const [selectedRoute, setSelectedRoute] = useState([...Routes]);
+  const location = useLocation();
+
+  function changeSelected(targetName: String){
+    setSelectedRoute(previous => previous.map(item => ({
+      ...item, selected: item.name === targetName ? true : false
+    })));
+  }
+
+  useEffect(() => {
+    setSelectedRoute(previous => previous.map(item => ({
+      ...item, selected: location.pathname.endsWith(item.path) ? true : false
+    })));
+  }, [location]);
+
   return (
     <StyledHeader>
       <HeaderContent>
@@ -138,12 +153,12 @@ const Header = () => {
           </div>
         </PerfilMessage>
         <HeaderBar>
-          {Routes.map((item, index) => (
+          {selectedRoute.map((item, index) => (
             <h2 key={index}>
               <Link
                 to={item.path} className={item.selected === true ? 'selected' : 'text-weight'} 
                 onClick={() => {
-                  item.selected = true
+                  changeSelected(item.name);
                 }}
               >
                 {item.name}

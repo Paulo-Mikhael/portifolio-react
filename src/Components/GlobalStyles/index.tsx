@@ -27,6 +27,14 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: 5px;
     font-size: 19px;
   }
+  section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: ${props => props.theme.colors.background};
+  }
 `
 
 export default GlobalStyles;

@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
 const StyledSection = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  background-color: ${props => props.theme.colors.background};
-
   .about-me-message {
     width: 75%;
     height: 90%;
@@ -64,7 +57,7 @@ const AboutMe = () => {
             Olá, meu nome é Paulo Miguel Bentes do Nascimento, tenho 17 anos, e, durante a escola, sempre gostei de apresentar 
             trabalhos em slides. Essa atividade exige lógica, comunicação e criatividade para resolver problemas, habilidades que 
             valorizo e aprimoro. Sempre me esforço para criar interfaces elogiadas e que gerem expectativa para meus próximos projetos. 
-            Por isso, me vejo exclusivamente na profissão de programador e sigo evoluindo como desenvolvedor full-stack.
+            Por isso, me vejo exclusivamente na profissão de programador e sigo evoluindo como desenvolvedor front-end
             <br/><br/>
             Acredito que saber escrever código não é tudo. Faço cursos de Design UI/UX porque acho fundamental que a interface do 
             usuário seja intuitiva e fácil de usar, proporcionando uma excelente experiência.<br/>

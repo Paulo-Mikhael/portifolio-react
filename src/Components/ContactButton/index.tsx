@@ -1,10 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{ width: string, childrenValue?: string }>`
   background-color: ${props => props.theme.colors.mainRed};
   padding: 10px;
-  width: 155px;
+  width: ${props => props.width.toString()};
   height: 45px;
   border: none;
   border-radius: 3px;
@@ -12,6 +11,7 @@ const StyledButton = styled.button`
   font-size: 18px;
   position: relative;
   overflow: hidden;
+  font-weight: bold;
 
   &:hover {
     background-color: ${props => props.theme.colors.darkRed};
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
 
   &:hover:after, &:focus:after {
     width: 110%;
-    content: 'Contate-me';
+    content: "${props => props.childrenValue}";
     color: ${props => props.theme.colors.grayTwo};
     font-weight: bolder;
     outline: none;
@@ -44,12 +44,14 @@ const StyledButton = styled.button`
 
 interface Props {
   children: React.ReactNode;
+  type?: "button" | "submit" | "reset" | undefined,
+  width?: string
 }
 
-const ContactButton = ({ children }: Props) => {
+const ContactButton = ({ children, type = "button", width = "155px" }: Props) => {
   return (
-    <StyledButton>
-      {children}
+    <StyledButton type={type} width={width} childrenValue={ children?.toString() }>
+      { children }
     </StyledButton>
   );
 }
