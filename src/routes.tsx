@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import MainScreen from './Pages/MainScreen';
 import { ThemeProvider } from 'styled-components';
 import Styles from './Styles';
@@ -10,14 +10,15 @@ import Contacts from './Pages/Contacts';
 
 const AppRouter = () => {
   return (
-    <ThemeProvider theme={vars}>
-      <Styles />
+    <ThemeProvider theme={vars}> {/*Variables*/}
+      <Styles /> {/*Global Styles*/}
       <Router>
-        <Header />
         <Routes>
-          <Route path='/' element={<MainScreen />} />
-          <Route path='/aboutme' element={<AboutMe />} />
-          <Route path='/contacts' element={<Contacts />} />
+          <Route path='/' element={<Header />}>
+            <Route index element={<MainScreen />} />
+            <Route path='/aboutme' element={<AboutMe />} />
+            <Route path='/contacts' element={<Contacts />} />
+          </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
