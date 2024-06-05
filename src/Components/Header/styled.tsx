@@ -23,11 +23,11 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+  `;
 
 export const PerfilMessage = styled.div`
   height: 100%;
-
+  
   .line-one {
     display: flex;
     align-items: center;
@@ -49,13 +49,13 @@ export const PerfilMessage = styled.div`
   }
 `;
 
-export const HeaderBar = styled.div`
+export const HeaderBar = styled.nav`
   width: 630px;
   display: flex;
   justify-content: right;
   align-items: center;
   gap: 20px;
-
+  
   a {
     text-decoration: none;
     transition: all 0.2s;

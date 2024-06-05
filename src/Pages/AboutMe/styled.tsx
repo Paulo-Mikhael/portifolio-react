@@ -10,7 +10,7 @@ export const StyledSection = styled.section`
     gap: 16px;
     
     #about-me-text {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 `
