@@ -86,7 +86,7 @@ const Contacts = () => {
                   </Link>
                 ))}
               </ContactOptions>
-              <ContactButton type="submit" width="270px" link="">
+              <ContactButton type="submit" width="270px" link="" autoFocus={false}>
                 Mandar mensagem
               </ContactButton>
             </form>

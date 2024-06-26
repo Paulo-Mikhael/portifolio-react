@@ -17,9 +17,9 @@ const AppRouter = () => {
         <Routes>
           <Route path='/' element={<Header />}>
             <Route index element={<MainScreen />} />
-            <Route path='/aboutme' element={<AboutMe />} />
-            <Route path='/contacts' element={<Contacts />} />
-            <Route path='/projects' element={<Projects />} />
+            <Route path='aboutme' element={<AboutMe />} />
+            <Route path='contacts' element={<Contacts />} />
+            <Route path='projects' element={<Projects />} />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>

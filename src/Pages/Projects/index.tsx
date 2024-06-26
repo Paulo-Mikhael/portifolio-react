@@ -1,6 +1,14 @@
 import ContactButton from '../../Components/ContactButton/index.tsx';
-import './styled.tsx';
-import { ProjectDescription, ProjectsCarrousel, StyledSection, TecnologiesContainer, TextContainer, VideoContainer, VideoTextContainer } from './styled.tsx';
+import {
+  ArrowsContainer,
+  ProjectDescription,
+  ProjectsCarrousel,
+  StyledSection,
+  TecnologiesContainer,
+  TextContainer,
+  VideoContainer,
+  VideoTextContainer
+} from './styled.tsx';
 
 const Projects = () => {
   return (
@@ -37,19 +45,44 @@ const Projects = () => {
               Contate me
             </ContactButton>
           </TecnologiesContainer>
-          <div>
-            <img src="Images/arrow-left.png" alt="left-arrow" />
-            <div>
+          <ArrowsContainer>
+            <img
+              src="Images/arrow-left.png"
+              alt="left-arrow"
+              onMouseOver={(evt) => {
+                evt.currentTarget.src = "Images/arrow-left-hover.png";
+              }}
+              onMouseLeave={(evt) => {
+                evt.currentTarget.src = "Images/arrow-left.png";
+              }}
+            />
+            <span>
               <div></div>
               <div></div>
               <div></div>
-            </div>
-            <img src="Images/arrow-right.png" alt="right-arrow" />
-          </div>
+            </span>
+            <img
+              src="Images/arrow-right.png"
+              alt="right-arrow"
+              onMouseOver={(evt) => {
+                evt.currentTarget.src = "Images/arrow-right-hover.png";
+              }}
+              onMouseLeave={(evt) => {
+                evt.currentTarget.src = "Images/arrow-right.png";
+              }}
+            />
+          </ArrowsContainer>
         </TextContainer>
       </VideoTextContainer>
       <ProjectsCarrousel>
-
+        <span>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </span>
       </ProjectsCarrousel>
     </StyledSection>
   );
