@@ -71,6 +71,9 @@ export const HeaderBar = styled.nav`
       &:hover {
         color: white;
       }
+      &:after{
+        background-color: white;
+      }
     }
 
     &:hover {
@@ -86,12 +89,12 @@ export const HeaderBar = styled.nav`
       transition: 0.3s;
       content: '';
       left: 0;
-      bottom: auto;
       top: -3px;
       width: 0%;
       height: 2px;
       background: ${props => props.theme.colors.mainRed};
       border-radius: 5px;
+      top: calc(110%);
     }
 
     &:hover:after {
@@ -99,7 +102,6 @@ export const HeaderBar = styled.nav`
     }
 
     &:active:after {
-      top: calc(100%);
       background-color: white;
     }
   }
