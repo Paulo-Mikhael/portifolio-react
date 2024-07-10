@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const StyledButton = styled.button<{ width: string, childrenValue?: string }>`
+export const StyledButton = styled.button<{ $width: string, $childrenValue?: string }>`
 background-color: ${props => props.theme.colors.mainRed};
 padding: 10px;
-width: ${props => props.width.toString()};
+width: ${props => props.$width.toString()};
 height: 45px;
 border: none;
 border-radius: 3px;
@@ -35,7 +35,7 @@ font-weight: bold;
 
 &:hover:after, &:focus:after {
   width: 110%;
-  content: "${props => props.childrenValue}";
+  content: "${props => props.$childrenValue}";
   color: ${props => props.theme.colors.grayTwo};
   font-weight: bolder;
   outline: none;

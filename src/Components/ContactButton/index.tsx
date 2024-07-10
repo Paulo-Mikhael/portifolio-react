@@ -5,15 +5,30 @@ interface Props {
   children: React.ReactNode;
   type?: "button" | "submit" | "reset" | undefined,
   width?: string,
-  link?: string,
+  link?: string | -1,
   autoFocus?: boolean
 }
 
 const ContactButton = ({ children, type = "button", width = "155px", link = "/contacts", autoFocus = true }: Props) => {
   const navigate = useNavigate();
+  function Navigation(param: string | -1){
+    if (param === -1){
+      navigate(-1);
+    }else{
+      navigate(param);
+    }
+  };
 
   return (
-    <StyledButton autoFocus={autoFocus} type={type} width={width} childrenValue={ children?.toString() } onClick={() => { navigate(link) }}>
+    <StyledButton
+        autoFocus={autoFocus}
+        type={type}
+        $width={width}
+        $childrenValue={ children?.toString() } 
+        onClick={() => {
+          Navigation(link);
+        }}
+      >
       { children }
     </StyledButton>
   );

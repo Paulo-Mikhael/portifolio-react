@@ -1,91 +1,69 @@
-import ContactButton from '../../Components/ContactButton/index.tsx';
-import {
-  ArrowsContainer,
-  ProjectDescription,
-  ProjectsCarrousel,
-  StyledSection,
-  TecnologiesContainer,
-  TextContainer,
-  VideoContainer,
-  VideoTextContainer
-} from './styled.tsx';
+import styled from "styled-components";
 
-const Projects = () => {
+const StyledContainer = styled.div`
+  width: 95%;
+  height: 80%;
+  overflow: hidden scroll;
+  position: relative;
+
+  &::-webkit-scrollbar{
+    background-color: transparent;
+  }
+`
+const StyledDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img{
+    width: 320px;
+  }
+  h2{
+    position: absolute;
+  }
+`
+const StyledCard = styled.article`
+  background-color: #051119;
+  border-radius: 40px;
+  width: 1074px;
+  height: 638px;
+  margin-top: 50px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+`
+const CardContainer = styled.div`
+  width: 90%;
+  height: 80%;
+  background-color: red;
+  margin-bottom: 40px;
+  display: flex;
+
+  .cardText{
+
+  }
+`
+
+export default function Projects() {
   return (
-    <StyledSection>
-      <VideoTextContainer>
-        <VideoContainer>
-          <video typeof='video/mp4'>
-            <source src='Videos/alura-studies-video.mp4' />
-            Seu navegador não é compatível com este vídeo
-          </video>
-        </VideoContainer>
-        <TextContainer>
-          <ProjectDescription>
-            <h3>
-              Alura Studies
-            </h3>
-            <h4>
-              A Alura Studies é uma aplicação web onde você pode definir uma tarefa e um tempo, para depois selecionar essa tarefa e começar uma
-              contagem regressiva a partir do tempo da mesma. Eu fiz esse projeto ao longo do curso de React na Alura, neste projeto utilizei
-              componentes de função e de classe, props e hooks, que são conhecimentos essenciais para trabalhar com react.
-            </h4>
-          </ProjectDescription>
-          <TecnologiesContainer>
-            <span>
-              <h5>
-                Tecnologias
-              </h5>
-              <div>
-                <i className="devicon-react-original"></i>
-                <i className="devicon-typescript-plain"></i>
-              </div>
-            </span>
-            <ContactButton>
-              Contate me
-            </ContactButton>
-          </TecnologiesContainer>
-          <ArrowsContainer>
-            <img
-              src="Images/arrow-left.png"
-              alt="left-arrow"
-              onMouseOver={(evt) => {
-                evt.currentTarget.src = "Images/arrow-left-hover.png";
-              }}
-              onMouseLeave={(evt) => {
-                evt.currentTarget.src = "Images/arrow-left.png";
-              }}
-            />
-            <span>
-              <div></div>
-              <div></div>
-              <div></div>
-            </span>
-            <img
-              src="Images/arrow-right.png"
-              alt="right-arrow"
-              onMouseOver={(evt) => {
-                evt.currentTarget.src = "Images/arrow-right-hover.png";
-              }}
-              onMouseLeave={(evt) => {
-                evt.currentTarget.src = "Images/arrow-right.png";
-              }}
-            />
-          </ArrowsContainer>
-        </TextContainer>
-      </VideoTextContainer>
-      <ProjectsCarrousel>
-        <span>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </span>
-      </ProjectsCarrousel>
-    </StyledSection>
+    <section>
+      <StyledContainer>
+        <StyledDiv>
+          <img src="Images/frame.png" alt="Uma moldura com bordas vermelhas escrito 'projetos' dentro" />
+        </StyledDiv>
+        <StyledCard>
+          <CardContainer>
+            <div className="cardText">
+              <p className="letter-spacing">
+                Blog
+              </p>
+              <h3>
+                XWriter
+              </h3>
+            </div>
+          </CardContainer>
+        </StyledCard>
+      </StyledContainer>
+    </section>
   );
 }
-
-export default Projects;

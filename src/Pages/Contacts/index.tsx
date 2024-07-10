@@ -70,7 +70,7 @@ const Contacts = () => {
             <form method="POST" action="https://formsubmit.co/paulomiguel11111971@gmail.com" encType="multipart/form-data">
               <h1 id="form-title">
                 Me mande uma mensagem por 
-                <a href="" onClick={() => copyText('afsdasd')}>
+                <a href="" onClick={() => copyText('paulomiguel11111971@gmail.com')}>
                   <abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr>
                 </a>!
               </h1>
@@ -80,8 +80,12 @@ const Contacts = () => {
               <input type="hidden" name="_next" value="" />
               <textarea required tabIndex={3} name="message" id="message-box" placeholder="Escreva uma mensagem"></textarea>
               <ContactOptions>
-                {contacts.map(contact => (
-                  <Link target="_blank" to={contact.path}>
+                {contacts.map((contact, index) => (
+                  <Link 
+                    target="_blank" 
+                    to={contact.path}
+                    key={index}
+                  >
                     <i className={contact.classes} />
                   </Link>
                 ))}
