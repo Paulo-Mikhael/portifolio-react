@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import ContactButton from "../../Components/ContactButton";
 import {
   MainBackground,
@@ -8,13 +7,6 @@ import {
   Blank
 } from "./styled.tsx";
 
-const StyledH1 = styled.h1`
-  font-size: 50px;
-`
-const StyledP = styled.p`
-  font-size: 20px;
-`
-
 const MainScreen = () => {
   return (
     <MainBackground>
@@ -22,12 +14,12 @@ const MainScreen = () => {
       <MainContent>
         <Blank />
         <div>
-          <StyledH1>
+          <h1>
             Bem Vindo! Junte-se a mim e Torne <Destaque>Seu Projeto Realidade</Destaque>
-          </StyledH1>
-          <StyledP>
+          </h1>
+          <p>
             Faça websites íncriveis com a ajuda de meus serviços! Sou um programador Front-End com conhecimentos em UI/UX design, pronto para trabalhar!
-          </StyledP>
+          </p>
         </div>
         <ContactButton>
           Contate me

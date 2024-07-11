@@ -1,68 +1,59 @@
-import styled from "styled-components";
-
-const StyledContainer = styled.div`
-  width: 95%;
-  height: 80%;
-  overflow: hidden scroll;
-  position: relative;
-
-  &::-webkit-scrollbar{
-    background-color: transparent;
-  }
-`
-const StyledDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  img{
-    width: 320px;
-  }
-  h2{
-    position: absolute;
-  }
-`
-const StyledCard = styled.article`
-  background-color: #051119;
-  border-radius: 40px;
-  width: 1074px;
-  height: 638px;
-  margin-top: 50px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-`
-const CardContainer = styled.div`
-  width: 90%;
-  height: 80%;
-  background-color: red;
-  margin-bottom: 40px;
-  display: flex;
-
-  .cardText{
-
-  }
-`
+import { IProjectCard } from "../../Interfaces";
+import { ProjectsData } from "../../Data";
+import {
+  StyledContainer,
+  StyledDiv,
+  StyledCard,
+  CardContainer,
+  TechnologiesContainer
+} from "./styled";
 
 export default function Projects() {
+  const projectsList: IProjectCard[] = ProjectsData
+
   return (
     <section>
       <StyledContainer>
         <StyledDiv>
           <img src="Images/frame.png" alt="Uma moldura com bordas vermelhas escrito 'projetos' dentro" />
         </StyledDiv>
-        <StyledCard>
-          <CardContainer>
-            <div className="cardText">
-              <p className="letter-spacing">
-                Blog
-              </p>
-              <h3>
-                XWriter
-              </h3>
-            </div>
-          </CardContainer>
-        </StyledCard>
+        {projectsList.map(project => (
+          <StyledCard $toRight={project.toRight}>
+            <CardContainer>
+              <div className="cardText">
+                <div>
+                  <p className="letter-spacing">
+                    {project.type}
+                  </p>
+                  <h3>
+                    {project.name}
+                  </h3>
+                  <p>
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+              <a href={project.linkToWeb} target="_blank">
+                <img src={project.projectImageUrl} alt={project.projectImageAlt} title={project.projectImageTitle} />
+              </a>
+            </CardContainer>
+            <TechnologiesContainer>
+              <a href={project.linkToWeb} target="_blank">
+                <img
+                  src="Icons/arrow.png"
+                  alt="Imagem de seta que leva para uma prévia do projeto"
+                  title="Ver prévia do projeto"
+                />
+              </a>
+              {project.deviconTechnologiesClasses.map(technologieClass => (
+                <i className={technologieClass}></i>
+              ))}
+              <a href={project.linkToGithubReadme} className="github-link" target="_blank">
+                <i className="devicon-github-original"></i>
+              </a>
+            </TechnologiesContainer>
+          </StyledCard>
+        ))}
       </StyledContainer>
     </section>
   );

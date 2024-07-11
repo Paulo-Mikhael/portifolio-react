@@ -7,7 +7,7 @@ import {
   HeaderBar
 } from "./styled.tsx";
 
-const Routes = [
+const routesList = [
   {
     name: 'Home',
     path: '/',
@@ -31,11 +31,11 @@ const Routes = [
 ]
 
 const Header = () => {
-  const [selectedRoute, setSelectedRoute] = useState([...Routes]);
+  const [routesProps, setRoutesProps] = useState([...routesList]);
   const location = useLocation();
 
   function changeSelected(targetName: string) {
-    setSelectedRoute(previous => previous.map(item => ({
+    setRoutesProps(previous => previous.map(item => ({
       ...item, selected: item.name === targetName ? true : false
     })));
   }
@@ -47,7 +47,7 @@ const Header = () => {
       locationUrl = locationUrl.slice(0, -1);
     }
 
-    setSelectedRoute(previous => previous.map(item => ({
+    setRoutesProps(previous => previous.map(item => ({
       ...item, selected: locationUrl.endsWith(item.path.toLowerCase()) ? true : false
     })));
   }, [location.pathname]);
@@ -70,7 +70,7 @@ const Header = () => {
             </div>
           </PerfilMessage>
           <HeaderBar>
-            {selectedRoute.map((item, index) => (
+            {routesProps.map((item, index) => (
               <h2 key={index}>
                 <Link
                   to={item.path} className={item.selected === true ? 'selected' : 'text-weight'}

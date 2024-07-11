@@ -23,7 +23,7 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  `;
+`;
 
 export const PerfilMessage = styled.div`
   height: 100%;
@@ -71,7 +71,7 @@ export const HeaderBar = styled.nav`
       &:hover {
         color: white;
       }
-      &:after{
+      &:hover:after{
         background-color: white;
       }
     }

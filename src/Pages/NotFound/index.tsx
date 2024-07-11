@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ContactButton from "../../Components/ContactButton";
-import { useNavigate } from "react-router-dom";
 
 const StyledSection = styled.section`
   width: 100%;

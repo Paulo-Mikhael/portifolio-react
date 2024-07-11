@@ -33,6 +33,10 @@ export const MainContent = styled.div`
 
     h1 {
       margin-bottom: 10px;
+      font-size: 50px;
+    }
+    p{
+      font-size: 20px;
     }
   }
 `;
