@@ -15,33 +15,32 @@ export const StyledContainer = styled.div`
 `
 export const StyledDiv = styled.div`
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  flex-direction: column;
   
-  img{
-    width: 320px;
+  h3 {
+    margin: 10px 0px 20px 0px;
   }
-  h2{
-    position: absolute;
+  h3, p {
+    margin-left: 60px;
   }
 `
-export const StyledCard = styled.article<{ $toRight: boolean }>`
-  transform: ${props => props.$toRight === true ? 'translateX(100px)' : ''};
-  background-color: #051119;
+export const StyledCard = styled.article`
+  background-color: #1b1b1b52;
   border-radius: 40px;
-  width: 1074px;
-  height: 508px;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   align-items: center;
-  justify-content: end;
   flex-direction: column;
 `
 export const CardContainer = styled.div`
   width: 90%;
-  height: 80%;
-  margin: 30px 0px;
+  height: 300px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .cardText{
     height: 100%;
@@ -53,7 +52,7 @@ export const CardContainer = styled.div`
     
     div{
       height: auto;
-      width: 19rem;
+      width: 50%;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -65,8 +64,7 @@ export const CardContainer = styled.div`
     }
   }
   img{
-    width: 384px;
-    height: 300px;
+    width: 400px;
   }
 `
 export const TechnologiesContainer = styled.div`
@@ -85,7 +83,8 @@ export const TechnologiesContainer = styled.div`
   }
   i{
     color: ${props => props.theme.colors.mainRed};
-    font-size: 41px;
+    font-size: 38px;
+    margin-bottom: 20px;
   }
   a{
     text-decoration: none;
@@ -98,4 +97,11 @@ export const TechnologiesContainer = styled.div`
       cursor: help;
     }
   }
+`
+
+export const Line = styled.div`
+  width: 100vw;
+  height: 4px;
+  background-color: ${props => props.theme.colors.mainRed};
+  border-radius: 10px;
 `

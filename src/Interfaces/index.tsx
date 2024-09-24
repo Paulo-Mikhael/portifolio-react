@@ -8,5 +8,4 @@ export interface IProjectCard {
   projectImageUrl: string,
   projectImageAlt: string,
   projectImageTitle: string,
-  toRight: boolean
 }

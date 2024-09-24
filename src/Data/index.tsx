@@ -11,19 +11,28 @@ export const ProjectsData: IProjectCard[] = [
     projectImageUrl: 'Images/phlox-images.png',
     projectImageAlt: 'Imagem de quatro telas da aplicação "PHLOX" espalhadas como se fossem folhas de papel',
     projectImageTitle: 'Telas da aplicação "PHLOX"',
-    toRight: false
   },
   {
-    name: 'XWriter',
+    name: 'Blog PHLOX',
     type: 'Blog',
-    description: 'Essa aplicação web tem o objetivo de logar usuários de uma base dados, através de um formulário de criar conta se necessário, e permitir à eles, postar mensagens.',
-    linkToWeb: 'https://xwriter.vercel.app/',
-    linkToGithubReadme: 'https://github.com/Paulo-Mikhael/XWriter?tab=readme-ov-file#readme',
-    deviconTechnologiesClasses: ['devicon-react-original', 'devicon-typescript-plain', 'devicon-tailwindcss-original', 'devicon-reactrouter-plain'],
-    projectImageUrl: 'Images/xwriter-images.png',
-    projectImageAlt: 'Imagem de três telas da aplicação "XWriter" espalhadas como se fossem folhas de papel',
-    projectImageTitle: 'Telas da aplicação "XWriter"',
-    toRight: true
+    description: 'Este projeto é um blog de uma empresa fictícia de tecnologia, onde além da própria poder postar o conteúdo da loja, também funciona como uma rede social onde os clientes podem interagir se tiverem uma conta.',
+    linkToWeb: 'https://phlox-blog.vercel.app/',
+    linkToGithubReadme: 'https://github.com/Paulo-Mikhael/phlox-blog?tab=readme-ov-file#readme',
+    deviconTechnologiesClasses: ['devicon-react-original', 'devicon-vitejs-plain', 'devicon-typescript-plain', 'devicon-tailwindcss-original','devicon-reactrouter-plain'],
+    projectImageUrl: 'Images/phlox-blog-images.png',
+    projectImageAlt: 'Imagem da página principal da aplicação Blog PHLOX',
+    projectImageTitle: 'Tela principal da aplicação "Blog PHLOX"',
+  },
+  {
+    name: 'in.orbit backend',
+    type: 'API',
+    description: 'Este é o servidor de uma aplicação chamada in.orbit, responsável por guardar e gerenciar as metas do usuário, elas são armazenadas em um banco de dados postgresql por um container docker e gerenciadas pelo framework back-end fastify.',
+    linkToWeb: 'https://github.com/Paulo-Mikhael/in-orbit-backend?tab=readme-ov-file#rodando-localmente-prompt-',
+    linkToGithubReadme: 'https://github.com/Paulo-Mikhael/in-orbit-backend?tab=readme-ov-file#readme',
+    deviconTechnologiesClasses: ['devicon-nodejs-plain-wordmark', 'devicon-typescript-plain', 'devicon-fastify-plain', 'devicon-docker-plain', 'devicon-postgresql-plain'],
+    projectImageUrl: 'Images/in-orbit-backend-images.png',
+    projectImageAlt: 'Imagem da documentação da API feita no swagger',
+    projectImageTitle: 'Documentação da API feita no swagger',
   },
   {
     name: 'Fastask',
@@ -35,6 +44,5 @@ export const ProjectsData: IProjectCard[] = [
     projectImageUrl: 'Images/fastask-images.png',
     projectImageAlt: 'Imagem de uma tela da aplicação "Fastask" espalhada como se fosse uma folha de papel',
     projectImageTitle: 'Telas da aplicação "PHLOX"',
-    toRight: false
   }
 ]

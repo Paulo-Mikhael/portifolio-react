@@ -5,7 +5,8 @@ import {
   StyledDiv,
   StyledCard,
   CardContainer,
-  TechnologiesContainer
+  TechnologiesContainer,
+  Line
 } from "./styled";
 
 export default function Projects() {
@@ -15,10 +16,14 @@ export default function Projects() {
     <section>
       <StyledContainer>
         <StyledDiv>
-          <img src="Images/frame.png" alt="Uma moldura com bordas vermelhas escrito 'projetos' dentro" />
+          <p className="letter-spacing">
+            Projetos
+          </p>
+          <h3>Confira alguns de meus trabalhos</h3>
+          <Line />
         </StyledDiv>
         {projectsList.map(project => (
-          <StyledCard $toRight={project.toRight}>
+          <StyledCard>
             <CardContainer>
               <div className="cardText">
                 <div>
@@ -45,8 +50,8 @@ export default function Projects() {
                   title="Ver prévia do projeto"
                 />
               </a>
-              {project.deviconTechnologiesClasses.map(technologieClass => (
-                <i className={technologieClass}></i>
+              {project.deviconTechnologiesClasses.map(technologyClass => (
+                <i className={technologyClass}></i>
               ))}
               <a href={project.linkToGithubReadme} className="github-link" target="_blank">
                 <i className="devicon-github-original"></i>

@@ -12,6 +12,14 @@ export const StyledSection = styled.section`
     #about-me-text {
       font-size: 18px;
     }
+    .abilities {
+      span {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin: 10px 0px 20px 0px;
+      }
+    }
   }
 `
 export const SectionContent = styled.div`
