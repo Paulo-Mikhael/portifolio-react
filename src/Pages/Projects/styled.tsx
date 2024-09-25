@@ -73,10 +73,8 @@ export const TechnologiesContainer = styled.div`
   display: flex;
   gap: 10px;
   position: relative;
+  margin: 20px 0px;
 
-  img, i{
-    margin-bottom: 10px;
-  }
   img{
     cursor: pointer;
     width: 41px;
@@ -84,7 +82,6 @@ export const TechnologiesContainer = styled.div`
   i{
     color: ${props => props.theme.colors.mainRed};
     font-size: 38px;
-    margin-bottom: 20px;
   }
   a{
     text-decoration: none;

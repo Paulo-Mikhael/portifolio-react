@@ -22,8 +22,8 @@ export default function Projects() {
           <h3>Confira alguns de meus trabalhos</h3>
           <Line />
         </StyledDiv>
-        {projectsList.map(project => (
-          <StyledCard>
+        {projectsList.map((project) => (
+          <StyledCard key={project.name}>
             <CardContainer>
               <div className="cardText">
                 <div>

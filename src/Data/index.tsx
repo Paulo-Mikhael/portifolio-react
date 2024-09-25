@@ -20,7 +20,7 @@ export const ProjectsData: IProjectCard[] = [
     linkToGithubReadme: 'https://github.com/Paulo-Mikhael/phlox-blog?tab=readme-ov-file#readme',
     deviconTechnologiesClasses: ['devicon-react-original', 'devicon-vitejs-plain', 'devicon-typescript-plain', 'devicon-tailwindcss-original','devicon-reactrouter-plain'],
     projectImageUrl: 'Images/phlox-blog-images.png',
-    projectImageAlt: 'Imagem da página principal da aplicação Blog PHLOX',
+    projectImageAlt: 'Imagem de cinco telas da aplicação "Blog PHLOX" espalhadas como se fossem folhas de papel',
     projectImageTitle: 'Tela principal da aplicação "Blog PHLOX"',
   },
   {
