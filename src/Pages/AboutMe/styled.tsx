@@ -32,10 +32,11 @@ export const SectionContent = styled.div`
   .perfil-photo {
     width: 20%;
     height: 80%;
+    display: flex;
+    align-items: center;
 
     img {
-      width: 100%;
-      height: 100%;
+      min-width: 110%;
     }
   }
 `

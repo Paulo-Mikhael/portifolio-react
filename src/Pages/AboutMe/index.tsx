@@ -9,7 +9,7 @@ const AboutMe = () => {
     <StyledSection>
       <SectionContent>
         <div className="perfil-photo">
-            <img src="Images/perfil-photo.svg" alt="foto de perfil" />
+            <img src="Images/perfil-photo.jpg" alt="foto de perfil" />
         </div>
         <div className="about-me-message">
           <p className="letter-spacing" id="about-me-letter-spacing">
