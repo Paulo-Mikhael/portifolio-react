@@ -37,6 +37,7 @@ export const SectionContent = styled.div`
 
     img {
       min-width: 110%;
+      border-radius: 6px;
     }
   }
 `
