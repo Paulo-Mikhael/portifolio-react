@@ -1,16 +1,20 @@
 import ContactButton from "../../Components/ContactButton";
 import { Link } from "react-router-dom";
-import { 
-  ContactContent, 
-  FormContainer, 
-  ImageContainer, 
-  StyledH2, 
-  StyledSection, 
-  ContactOptions 
+import {
+  ContactContent,
+  FormContainer,
+  ImageContainer,
+  StyledH2,
+  StyledSection,
+  ContactOptions
 } from "./styled.tsx";
+import { useState } from "react";
 
 const Contacts = () => {
-
+  const [emailSended, setEmailSended] = useState<boolean>(false);
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
+  const [userMessage, setUserMessage] = useState<string>("");
   const contacts = [
     {
       name: 'Email',
@@ -46,16 +50,16 @@ const Contacts = () => {
   function copyText(texto: string) {
     const elementoTemporario = document.createElement('textarea');
     elementoTemporario.value = texto;
-    
+
     document.body.appendChild(elementoTemporario);
-    
+
     elementoTemporario.select();
     elementoTemporario.setSelectionRange(0, 99999);
-    
+
     document.execCommand('copy');
-    
+
     document.body.removeChild(elementoTemporario);
-    
+
     alert(`'${texto}'` + ' copiado para a área de transferência!');
   }
 
@@ -67,22 +71,45 @@ const Contacts = () => {
         </ImageContainer>
         <FormContainer>
           <div id="form-content">
-            <form method="POST" action="https://formsubmit.co/paulomiguel11111971@gmail.com" encType="multipart/form-data">
+            <form
+              method="POST"
+              action="https://formsubmit.co/paulomiguel11111971@gmail.com"
+              encType="multipart/form-data"
+            >
               <h1 id="form-title">
-                Me mande uma mensagem por 
+                Me mande uma mensagem por
                 <a href="" onClick={() => copyText('paulomiguel11111971@gmail.com')}>
                   <abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr>
                 </a>!
               </h1>
-              <input required autoFocus={true} tabIndex={1} type="text" name="name" id="text-input" placeholder="Seu nome" />
-              <input required tabIndex={2} type="email" name="email" id="email-input" placeholder="Seu email" />
+              <input
+                onChange={(evt) => {
+                  setUserName(evt.target.value);
+                }}
+                value={userName}
+                required autoFocus={true} tabIndex={1} type="text" name="name" id="text-input" placeholder="Seu nome"
+              />
+              <input
+                onChange={(evt) => {
+                  setUserEmail(evt.target.value);
+                }}
+                value={userEmail}
+                required tabIndex={2} type="email" name="email" id="email-input" placeholder="Seu email"
+              />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="" />
-              <textarea required tabIndex={3} name="message" id="message-box" placeholder="Escreva uma mensagem"></textarea>
+              <input type="hidden" name="_next" value="https://portifolio-react-three.vercel.app" />
+              <textarea
+                onChange={(evt) => {
+                  setUserMessage(evt.target.value);
+                }}
+                value={userMessage}
+                required tabIndex={3} name="message" id="message-box" placeholder="Escreva uma mensagem"
+              >
+              </textarea>
               <ContactOptions>
                 {contacts.map((contact, index) => (
-                  <Link 
-                    target="_blank" 
+                  <Link
+                    target="_blank"
                     to={contact.path}
                     key={index}
                   >
@@ -90,7 +117,14 @@ const Contacts = () => {
                   </Link>
                 ))}
               </ContactOptions>
-              <ContactButton type="submit" width="270px" link="" autoFocus={false}>
+              <ContactButton
+                onClick={() => {
+                  alert("Mensagem enviada com sucesso. Espero lhe ver em breve!");
+                  setEmailSended(true);
+                }}
+                hidden={emailSended === true}
+                type="submit" width="270px" autoFocus={false}
+              >
                 Mandar mensagem
               </ContactButton>
             </form>

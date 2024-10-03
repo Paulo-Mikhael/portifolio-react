@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledButton = styled.button<{ $width: string, $childrenValue?: string }>`
+export const StyledButton = styled.button<{ $width: string, $childrenValue?: string, $hidden?: boolean }>`
 background-color: ${props => props.theme.colors.mainRed};
 padding: 10px;
 width: ${props => props.$width.toString()};
@@ -12,6 +12,7 @@ font-size: 18px;
 position: relative;
 overflow: hidden;
 font-weight: bold;
+display: ${props => props.$hidden === true ? "none" : "initial"};
 
 &:hover {
   background-color: ${props => props.theme.colors.darkRed};

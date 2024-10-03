@@ -2,15 +2,15 @@ import { IProjectCard } from "../Interfaces";
 
 export const ProjectsData: IProjectCard[] = [
   {
-    name: 'PHLOX',
+    name: 'CINE NIGHTLY',
     type: 'Landing Page',
-    description: 'A PHLOX é um e-commerce que vende os mais diversos acessórios do mundo moderno. Os vários blocos com cores chamativas e design minimalista da loja, ajudam na retenção do usuário, gerando talvez um futuro cliente.',
-    linkToWeb: 'https://phlox-psi.vercel.app/',
-    linkToGithubReadme: 'https://github.com/Paulo-Mikhael/phlox?tab=readme-ov-file#readme',
-    deviconTechnologiesClasses: ['devicon-react-original', 'devicon-typescript-plain', 'devicon-tailwindcss-original'],
-    projectImageUrl: 'Images/phlox-images.png',
-    projectImageAlt: 'Imagem de quatro telas da aplicação "PHLOX" espalhadas como se fossem folhas de papel',
-    projectImageTitle: 'Telas da aplicação "PHLOX"',
+    description: 'A CINE NIGHTLY, empresa fictícia criada para o projeto, é uma plataforma de compra de ingressos, e para chamar a atenção dos clientes, teve-se a ideia de personalizar o site com um filme popular, assim, gerando uma boa impressão pro usuário que irá realizar a compra. Além do design, a página conta com animações que ajudam ainda mais na retenção.',
+    linkToWeb: 'https://cinema-lp.vercel.app/',
+    linkToGithubReadme: 'https://github.com/Paulo-Mikhael/cinema-lp?tab=readme-ov-file#readme',
+    deviconTechnologiesClasses: ['devicon-nextjs-plain', 'devicon-typescript-plain', 'devicon-tailwindcss-original'],
+    projectImageUrl: 'Images/deadpool-images.png',
+    projectImageAlt: 'Imagem de quatro telas da aplicação "CINE NIGHTLY" espalhadas como se fossem folhas de papel',
+    projectImageTitle: 'Telas da aplicação "CINE NIGHTLY"',
   },
   {
     name: 'Blog PHLOX',

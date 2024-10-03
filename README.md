@@ -8,10 +8,13 @@
 
 ## Tecnologias 💻
   <div>
-    <abbr title="React">
+    <abbr title="Vite - Framework javascript">
+      <img src="https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white" />
+    </abbr>
+    <abbr title="React - Framework javascript">
       <img src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" />
     </abbr>
-    <abbr title="Typescript">
+    <abbr title="Typescript - Liguagem fortemente tipada">
       <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
     </abbr>
   </div>
