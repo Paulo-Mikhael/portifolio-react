@@ -21,6 +21,11 @@ export const StyledSection = styled.section`
       }
     }
   }
+
+  @media screen and (max-width: 1280px){
+    min-height: 100vh;
+    height: auto;
+  }
 `
 export const SectionContent = styled.div`
   width: 90%;
@@ -39,6 +44,13 @@ export const SectionContent = styled.div`
       min-width: 110%;
       border-radius: 6px;
     }
+  }
+
+  @media screen and (max-width: 1280px){
+    width: 90%;
+    height: auto;
+    align-items: start;
+    margin-top: 130px;
   }
 `
 export const Line = styled.div`
