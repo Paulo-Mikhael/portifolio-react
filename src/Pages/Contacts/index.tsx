@@ -8,7 +8,7 @@ import {
   StyledSection,
   ContactOptions
 } from "./styled.tsx";
-import { useState } from "react";
+import { useState } from "react"
 
 const Contacts = () => {
   const [emailSended, setEmailSended] = useState<boolean>(false);
@@ -119,13 +119,28 @@ const Contacts = () => {
               </ContactOptions>
               <ContactButton
                 onClick={() => {
+                  if (userName === ""){
+                    alert("Preencha o campo de nome");
+                    return;
+                  };
+                  if (userEmail === ""){
+                    alert("Preencha o campo de email");
+                    return;
+                  };
+                  if (userMessage === ""){
+                    alert("Preencha o campo de messagem");
+                    return;
+                  };
+
                   alert("Mensagem enviada com sucesso. Espero lhe ver em breve!");
                   setEmailSended(true);
                 }}
                 hidden={emailSended === true}
-                type="submit" width="270px" autoFocus={false}
+                type={"submit"}
+                width="270px"
+                autoFocus={true}
               >
-                Mandar mensagem
+                Mandar Mensagem
               </ContactButton>
             </form>
           </div>

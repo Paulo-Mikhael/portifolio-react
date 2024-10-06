@@ -25,6 +25,13 @@ export const ImageContainer = styled.div`
     width: 450px;
     height: 450px;
   }
+
+  @media screen and (max-width: 1280px) {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
 `
 export const FormContainer = styled.span`
   width: 50%;
@@ -55,6 +62,7 @@ export const FormContainer = styled.span`
         h1{
           font-size: 26px;
           margin-bottom: 20px;
+          text-align: center;
 
           abbr{
             color: inherit;
@@ -69,6 +77,11 @@ export const FormContainer = styled.span`
             &:hover{
               color: ${props => props.theme.colors.grayTwo};
             }
+          }
+
+          @media screen and (max-width: 1280px) {
+            font-size: 20px;
+            margin-bottom: 10px;
           }
         }
         input, textarea{
@@ -154,6 +167,14 @@ export const ContactOptions = styled.div`
         z-index: 1;
         top: -165px;
     }
+
+    @media screen and (max-width: 1280px) {
+      font-size: 26px;
+
+      &.fa-phone {
+        font-size: 21px;
+      }
+    }
   }
 `
 export const StyledH2 = styled.h2`
@@ -174,5 +195,9 @@ export const StyledH2 = styled.h2`
     &:hover{
       color: ${props => props.theme.colors.grayTwo};
     }
+  }
+
+  @media screen and (max-width: 1280px) {
+    display: none;
   }
 `

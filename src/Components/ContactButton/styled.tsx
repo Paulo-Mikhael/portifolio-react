@@ -4,7 +4,7 @@ export const StyledButton = styled.button<{ $width: string, $childrenValue?: str
 background-color: ${props => props.theme.colors.mainRed};
 padding: 10px;
 width: ${props => props.$width.toString()};
-height: 45px;
+height: auto;
 border: none;
 border-radius: 3px;
 cursor: pointer;
