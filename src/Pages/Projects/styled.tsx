@@ -25,6 +25,10 @@ export const StyledDiv = styled.div`
   h3, p {
     margin-left: 60px;
   }
+
+  @media screen and (max-width: 1280px) {
+    margin-top: 30px;
+  }
 `
 export const StyledCard = styled.article`
   background-color: #1b1b1b52;
@@ -65,6 +69,10 @@ export const CardContainer = styled.div`
   }
   img{
     width: 400px;
+
+    @media screen and (max-width: 1280px) {
+      width: 350px;
+    }
   }
 `
 export const TechnologiesContainer = styled.div`

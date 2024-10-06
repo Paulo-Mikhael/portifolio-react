@@ -22,8 +22,8 @@ export default function Projects() {
           <h3>Confira alguns de meus trabalhos</h3>
           <Line />
         </StyledDiv>
-        {projectsList.map((project) => (
-          <StyledCard key={project.name}>
+        {projectsList.map((project, index) => (
+          <StyledCard key={index}>
             <CardContainer>
               <div className="cardText">
                 <div>
@@ -50,8 +50,8 @@ export default function Projects() {
                   title="Ver prévia do projeto"
                 />
               </a>
-              {project.deviconTechnologiesClasses.map(technologyClass => (
-                <i className={technologyClass}></i>
+              {project.deviconTechnologiesClasses.map((technologyClass, index) => (
+                <i key={index} className={technologyClass}></i>
               ))}
               <a href={project.linkToGithubReadme} className="github-link" target="_blank">
                 <i className="devicon-github-original"></i>
