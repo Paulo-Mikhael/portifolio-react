@@ -45,17 +45,17 @@ export const PerfilMessage = styled.div`
   }
 
   .line-two {
-    width: 300px;
+    width: auto;
   }
 `;
 
 export const HeaderBar = styled.nav`
-  width: 630px;
+  width: auto;
   display: flex;
   justify-content: right;
   align-items: center;
   gap: 20px;
-  
+    
   a {
     text-decoration: none;
     transition: all 0.2s;
@@ -103,6 +103,12 @@ export const HeaderBar = styled.nav`
 
     &:active:after {
       background-color: white;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    abbr {
+      display: none;
     }
   }
 `;

@@ -38,11 +38,17 @@ export const MainContent = styled.div`
     p{
       font-size: 20px;
     }
-  }
 
-  @media screen and (max-width: 1280px){
-    div {
+    @media screen and (max-width: 1280px){
       width: 90%;
+    }
+    @media screen and (max-width: 1024px) {
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 16px;
+      }
     }
   }
 `;

@@ -138,7 +138,7 @@ const Contacts = () => {
                 hidden={emailSended === true}
                 type={"submit"}
                 width="270px"
-                autoFocus={true}
+                autoFocus={false}
               >
                 Mandar Mensagem
               </ContactButton>

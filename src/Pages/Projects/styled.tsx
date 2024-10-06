@@ -65,6 +65,10 @@ export const CardContainer = styled.div`
       h3{
         margin-bottom: 10px;
       }
+
+      @media screen and (max-width: 1024px) {
+        width: 90%;
+      }
     }
   }
   img{
@@ -72,6 +76,9 @@ export const CardContainer = styled.div`
 
     @media screen and (max-width: 1280px) {
       width: 350px;
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
     }
   }
 `
