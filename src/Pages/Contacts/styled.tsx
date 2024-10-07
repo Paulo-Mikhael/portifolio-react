@@ -23,14 +23,16 @@ export const ImageContainer = styled.div`
 
   img{
     width: 450px;
-    height: 450px;
+    height: auto;
+
+    
+    @media screen and (max-width: 1280px) {
+      width: 300px;
+    }
   }
 
-  @media screen and (max-width: 1280px) {
-    img {
-      width: 300px;
-      height: 300px;
-    }
+  @media screen and (max-width: 650px) {
+    display: none;
   }
 `
 export const FormContainer = styled.span`
@@ -107,6 +109,9 @@ export const FormContainer = styled.span`
         }
       }
     }
+  }
+  @media screen and (max-width: 650px) {
+    width: 100%;
   }
 `
 export const ContactOptions = styled.div`

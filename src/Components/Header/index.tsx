@@ -1,55 +1,61 @@
-import { Link, useLocation, Outlet } from 'react-router-dom';
+import { Link, useLocation, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   StyledHeader,
   HeaderContent,
   PerfilMessage,
-  HeaderBar
+  HeaderBar,
 } from "./styled.tsx";
 
 const routesList = [
   {
-    name: 'Home',
-    path: '/',
-    selected: true
+    name: "Home",
+    path: "/",
+    selected: true,
   },
   {
-    name: 'Sobre mim',
-    path: '/aboutme',
-    selected: false
+    name: "Sobre mim",
+    path: "/aboutme",
+    selected: false,
   },
   {
-    name: 'Projetos',
-    path: '/projects',
-    selected: false
+    name: "Projetos",
+    path: "/projects",
+    selected: false,
   },
   {
-    name: 'Contatos',
-    path: '/contacts',
-    selected: false
-  }
-]
+    name: "Contatos",
+    path: "/contacts",
+    selected: false,
+  },
+];
 
 const Header = () => {
   const [routesProps, setRoutesProps] = useState([...routesList]);
   const location = useLocation();
 
   function changeSelected(targetName: string) {
-    setRoutesProps(previous => previous.map(item => ({
-      ...item, selected: item.name === targetName ? true : false
-    })));
+    setRoutesProps((previous) =>
+      previous.map((item) => ({
+        ...item,
+        selected: item.name === targetName ? true : false,
+      }))
+    );
   }
 
   useEffect(() => {
     let locationUrl = location.pathname.toLowerCase();
 
-    if (locationUrl.endsWith('/') && locationUrl.length > 1) {
+    if (locationUrl.endsWith("/") && locationUrl.length > 1) {
       locationUrl = locationUrl.slice(0, -1);
     }
 
-    setRoutesProps(previous => previous.map(item => ({
-      ...item, selected: locationUrl.endsWith(item.path.toLowerCase()) ? true : false
-    })));
+    setRoutesProps((previous) =>
+      previous.map((item) => ({
+        ...item,
+        selected: locationUrl.endsWith(item.path.toLowerCase()) ? true : false,
+      }))
+    );
   }, [location.pathname]);
 
   return (
@@ -59,21 +65,20 @@ const Header = () => {
           <PerfilMessage>
             <div className="line-one">
               <img src="Icons/code-icon-white.png" alt="code icon" />
-              <h2>
-                Paulo Miguel
-              </h2>
+              <h2>Paulo Miguel</h2>
             </div>
             <div className="line-two">
-              <p className="letter-spacing">
-                Web Developer
-              </p>
+              <p className="letter-spacing">Web Developer</p>
             </div>
           </PerfilMessage>
           <HeaderBar>
             {routesProps.map((item, index) => (
               <h2 key={index}>
                 <Link
-                  to={item.path} className={item.selected === true ? 'selected' : 'text-weight'}
+                  to={item.path}
+                  className={
+                    item.selected === true ? "selected" : "text-weight"
+                  }
                   onClick={() => {
                     changeSelected(item.name);
                   }}
@@ -83,7 +88,11 @@ const Header = () => {
               </h2>
             ))}
             <abbr title="Mudar o idioma para português">
-              <img src="Images/brazil.png" alt="brazil flag button to change language" id="header-image" />
+              <img
+                src="Images/brazil.png"
+                alt="brazil flag button to change language"
+                id="header-image"
+              />
             </abbr>
           </HeaderBar>
         </HeaderContent>
@@ -91,6 +100,6 @@ const Header = () => {
       <Outlet />
     </>
   );
-}
+};
 
 export default Header;

@@ -23,6 +23,10 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 734px) {
+    justify-content: right;
+  }
 `;
 
 export const PerfilMessage = styled.div`
@@ -43,9 +47,12 @@ export const PerfilMessage = styled.div`
       font-size: 22px;
     }
   }
-
   .line-two {
     width: auto;
+  }
+
+  @media screen and (max-width: 734px) {
+    display: none;
   }
 `;
 
@@ -64,7 +71,7 @@ export const HeaderBar = styled.nav`
     font-size: 23px;
 
     &.selected {
-      color: ${props => props.theme.colors.mainRed};
+      color: ${(props) => props.theme.colors.mainRed};
       font-weight: bold;
       font-size: 24px;
 
@@ -75,15 +82,12 @@ export const HeaderBar = styled.nav`
         background-color: white;
       }
     }
-
     &:hover {
-      color: ${props => props.theme.colors.mainRed};
+      color: ${(props) => props.theme.colors.mainRed};
     }
-
     &:active {
       color: white;
     }
-
     &:after {
       position: absolute;
       transition: 0.3s;
@@ -92,22 +96,27 @@ export const HeaderBar = styled.nav`
       top: -3px;
       width: 0%;
       height: 2px;
-      background: ${props => props.theme.colors.mainRed};
+      background: ${(props) => props.theme.colors.mainRed};
       border-radius: 5px;
       top: calc(110%);
     }
-
     &:hover:after {
       width: 100%;
     }
-
     &:active:after {
       background-color: white;
     }
-  }
 
-  @media screen and (max-width: 1024px) {
-    abbr {
+    @media screen and (max-width: 485px) {
+      font-size: 19px;
+
+      &.selected {
+        font-size: 20px;
+      }
+    }
+  }
+  abbr {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
   }

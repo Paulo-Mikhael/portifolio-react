@@ -50,11 +50,23 @@ export const MainContent = styled.div`
         font-size: 16px;
       }
     }
+    @media screen and (max-width: 734px) {
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 734px) {
+    align-items: center;
   }
 `;
 
 export const Destaque = styled.b`
-  color: ${props => props.theme.colors.mainRed};
+  color: ${(props) => props.theme.colors.mainRed};
 `;
 
 export const Blank = styled.div`

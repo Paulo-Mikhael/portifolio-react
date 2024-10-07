@@ -70,6 +70,10 @@ export const CardContainer = styled.div`
         width: 90%;
       }
     }
+
+    @media screen and (max-width: 540px) {
+      width: 90%;
+    }
   }
   img{
     width: 400px;
@@ -97,6 +101,10 @@ export const TechnologiesContainer = styled.div`
   i{
     color: ${props => props.theme.colors.mainRed};
     font-size: 38px;
+
+    @media screen and (max-width: 540px) {
+      font-size: 30px;
+    }
   }
   a{
     text-decoration: none;
