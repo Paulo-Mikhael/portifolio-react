@@ -1,4 +1,4 @@
-import { IProjectCard } from "../../Interfaces";
+import type { IProjectCard } from "../../Interfaces";
 import { ProjectsData } from "../../Data";
 import {
   StyledContainer,
@@ -6,19 +6,17 @@ import {
   StyledCard,
   CardContainer,
   TechnologiesContainer,
-  Line
+  Line,
 } from "./styled";
 
 export default function Projects() {
-  const projectsList: IProjectCard[] = ProjectsData
+  const projectsList: IProjectCard[] = ProjectsData;
 
   return (
     <section>
       <StyledContainer>
         <StyledDiv>
-          <p className="letter-spacing">
-            Projetos
-          </p>
+          <p className="letter-spacing">Projetos</p>
           <h3>Confira alguns de meus trabalhos</h3>
           <Line />
         </StyledDiv>
@@ -27,19 +25,17 @@ export default function Projects() {
             <CardContainer>
               <div className="cardText">
                 <div>
-                  <p className="letter-spacing">
-                    {project.type}
-                  </p>
-                  <h3>
-                    {project.name}
-                  </h3>
-                  <p>
-                    {project.description}
-                  </p>
+                  <p className="letter-spacing">{project.type}</p>
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
                 </div>
               </div>
               <a href={project.linkToWeb} target="_blank">
-                <img src={project.projectImageUrl} alt={project.projectImageAlt} title={project.projectImageTitle} />
+                <img
+                  src={project.projectImageUrl}
+                  alt={project.projectImageAlt}
+                  title={project.projectImageTitle}
+                />
               </a>
             </CardContainer>
             <TechnologiesContainer>
@@ -50,11 +46,17 @@ export default function Projects() {
                   title="Ver prévia do projeto"
                 />
               </a>
-              {project.deviconTechnologiesClasses.map((technologyClass, index) => (
-                <i key={index} className={technologyClass}></i>
-              ))}
-              <a href={project.linkToGithubReadme} className="github-link" target="_blank">
-                <i className="devicon-github-original"></i>
+              {project.deviconTechnologiesClasses.map(
+                (technologyClass, index) => (
+                  <i key={index} className={technologyClass} />
+                )
+              )}
+              <a
+                href={project.linkToGithubReadme}
+                className="github-link"
+                target="_blank"
+              >
+                <i className="devicon-github-original" />
               </a>
             </TechnologiesContainer>
           </StyledCard>
