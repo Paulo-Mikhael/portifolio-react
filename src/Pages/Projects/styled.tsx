@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   width: 95%;
@@ -12,7 +12,10 @@ export const StyledContainer = styled.div`
   &::-webkit-scrollbar{
     background-color: transparent;
   }
-`
+  /* @media screen and (max-height: 460px) {
+    height: 70%;
+  } */
+`;
 export const StyledDiv = styled.div`
   display: flex;
   align-items: start;
@@ -29,7 +32,7 @@ export const StyledDiv = styled.div`
   @media screen and (max-width: 1280px) {
     margin-top: 30px;
   }
-`
+`;
 export const StyledCard = styled.article`
   background-color: #1b1b1b52;
   border-radius: 40px;
@@ -38,7 +41,7 @@ export const StyledCard = styled.article`
   display: flex;
   align-items: center;
   flex-direction: column;
-`
+`;
 export const CardContainer = styled.div`
   width: 90%;
   height: 300px;
@@ -85,7 +88,7 @@ export const CardContainer = styled.div`
       display: none;
     }
   }
-`
+`;
 export const TechnologiesContainer = styled.div`
   width: 90%;
   height: auto;
@@ -99,7 +102,7 @@ export const TechnologiesContainer = styled.div`
     width: 41px;
   }
   i{
-    color: ${props => props.theme.colors.mainRed};
+    color: ${(props) => props.theme.colors.mainRed};
     font-size: 38px;
 
     @media screen and (max-width: 540px) {
@@ -117,11 +120,11 @@ export const TechnologiesContainer = styled.div`
       cursor: help;
     }
   }
-`
+`;
 
 export const Line = styled.div`
   width: 100vw;
   height: 4px;
-  background-color: ${props => props.theme.colors.mainRed};
+  background-color: ${(props) => props.theme.colors.mainRed};
   border-radius: 10px;
-`
+`;

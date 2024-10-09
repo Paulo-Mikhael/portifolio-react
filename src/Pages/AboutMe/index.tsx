@@ -5,7 +5,8 @@ const AboutMe = () => {
     <StyledSection>
       <SectionContent>
         <div className="perfil-photo">
-          <img src="Images/perfil-photoo.png" alt="foto de perfil" />
+          <img src="Images/perfil-photo.jpg" alt="foto de perfil" />
+          {/* <img src="Images/perfil-photoo.png" alt="foto de perfil" /> */}
         </div>
         <div className="about-me-message">
           <p className="letter-spacing" id="about-me-letter-spacing">
@@ -14,10 +15,13 @@ const AboutMe = () => {
           <h3 id="about-me-title">Olá! Me chamo Paulo Miguel</h3>
           <Line />
           <h4 id="about-me-text">
-            {/* Olá, meu nome é Paulo Miguel Bentes do Nascimento, tenho 18 anos, e, durante a escola, sempre gostei de apresentar 
-            trabalhos em slides. Essa atividade exige lógica, comunicação e criatividade para resolver problemas, habilidades que 
-            valorizo e aprimoro. Sempre me esforço para criar interfaces elogiadas e que gerem expectativa para meus próximos projetos. 
-            Por isso, me vejo exclusivamente na profissão de programador e sigo evoluindo como desenvolvedor front-end */}
+            {/* Olá, meu nome é Paulo Miguel Bentes do Nascimento, tenho 18 anos, e,
+            durante a escola, sempre gostei de apresentar trabalhos em slides.
+            Essa atividade exige lógica, comunicação e criatividade para
+            resolver problemas, habilidades que valorizo e aprimoro. Sempre me
+            esforço para criar interfaces elogiadas e que gerem expectativa para
+            meus próximos projetos. Por isso, me vejo exclusivamente na
+            profissão de programador e sigo evoluindo como desenvolvedor front-end  */}
             Me chamo Paulo Miguel Bentes do Nascimento, tenho 18 anos, sou de
             Manaus/AM. Além das minhas habilidades técnicas em programação,
             acredito que essa é uma área que requer muita lógica e comunicação,

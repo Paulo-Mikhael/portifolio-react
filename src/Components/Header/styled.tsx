@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  padding-top: 20px;
   position: absolute;
   z-index: 2;
 
@@ -14,6 +14,10 @@ export const StyledHeader = styled.header`
     cursor: pointer;
     width: 65px;
     height: 70px;
+  }
+  @media screen and (max-height: 460px) {
+    margin: 0;
+    background-color: black;
   }
 `;
 
