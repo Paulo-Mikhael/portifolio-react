@@ -80,6 +80,26 @@ export const ProjectsData: IProjectCard[] = [
     projectImageTitle: "Documentação da API feita no swagger",
   },
   {
+    name: "Nutri+",
+    type: "Dashboard",
+    description:
+      "A Nutri+ é uma aplicação criada para ajudar o usuário a monitorar seus dados nutricionais, mostrando seu IMC, Taxa Metabólica Basal e consumo de água. Além disso, com base nos dados fornecidos, é criado um gráfico que mostra como deve ser seu consumo diário de calorias com base no objetivo escolhido.",
+    linkToWeb: "https://nutri-plus-xi.vercel.app",
+    linkToGithubReadme:
+      "https://github.com/Paulo-Mikhael/nutri-plus-dashboard?tab=readme-ov-file#readme",
+    deviconTechnologiesClasses: [
+      "devicon-react-original",
+      "devicon-nextjs-plain",
+      "devicon-typescript-plain",
+      "devicon-tailwindcss-original",
+    ],
+    projectImageUrl: "Images/dashboard-images.png",
+    projectImageAlt:
+      "Imagem de um gráfico mostrando dados nutricionais do usuário",
+    projectImageTitle:
+      "Tela da Nutri+ mostrando um gráfico que apresenta dados nutricionais do usuário e sua meta",
+  },
+  {
     name: "Fastask",
     type: "Aplicação Web",
     description:

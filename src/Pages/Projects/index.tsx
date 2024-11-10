@@ -40,11 +40,7 @@ export default function Projects() {
             </CardContainer>
             <TechnologiesContainer>
               <a href={project.linkToWeb} target="_blank">
-                <img
-                  src="Icons/arrow.png"
-                  alt="Imagem de seta que leva para uma prévia do projeto"
-                  title="Ver prévia do projeto"
-                />
+                <i className="fa-solid fa-arrow-right fa-fade" />
               </a>
               {project.deviconTechnologiesClasses.map(
                 (technologyClass, index) => (
@@ -56,7 +52,7 @@ export default function Projects() {
                 className="github-link"
                 target="_blank"
               >
-                <i className="devicon-github-original" />
+                <i className="fa-brands fa-github fa-bounce" />
               </a>
             </TechnologiesContainer>
           </StyledCard>
