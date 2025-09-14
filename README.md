@@ -1,5 +1,5 @@
 # Portifólio Desenvolvedor Front-End
-[![Uma screenshot do meu portifólio de devenvolvedor Front-End, nela há um header com uma barra de navegação, uma mensagem principal pequena com um subtítulo e um botão vermelho para contato](public/images/portifolio-screenshot.png)](https://portifolio-react-three.vercel.app/)
+[![Uma screenshot do meu portifólio de devenvolvedor Front-End, nela há um header com uma barra de navegação, uma mensagem principal pequena com um subtítulo e um botão vermelho para contato](public/Images/portifolio-screenshot.png)](https://portifolio-react-three.vercel.app/)
 
 ## Inspiração para o Portifólio ✨
   ### Eu semprei gostei de coisas relacionadas ao cinema, então minha ideia era de fazer algo parecido e apresentar meus trabalhos com um design cinematográfico, então, procurei inspirações que relacionavam cinema e tecnologia, não precisei pensar muito para chegar nos streamings. A partir dessa ideia, meu portifolio tem design com cores voltadas ao vermelho e preto e com animações suaves. Assim como em uma plataforma de streaming, esse estilo transmite criatividade e profissionalismo, justamente a imagem que quero passar.
