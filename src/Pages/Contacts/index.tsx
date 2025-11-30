@@ -8,7 +8,7 @@ import {
   StyledSection,
   ContactOptions
 } from "./styled.tsx";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Contacts = () => {
   const [emailSended, setEmailSended] = useState<boolean>(false);
@@ -24,7 +24,7 @@ const Contacts = () => {
     {
       name: 'Whatsapp',
       classes: 'fa-brands fa-whatsapp',
-      path: 'https://wa.me/5592992813253?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20oferta...'
+      path: `https://wa.me/5592992813253?text=${greeting()} Gostaria de falar com você sobre...`
     },
     {
       name: 'Instagram',
@@ -39,7 +39,7 @@ const Contacts = () => {
     {
       name: 'Phone',
       classes: 'fa-solid fa-phone',
-      path: 'https://wa.me/5592992813253?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20oferta...'
+      path: `https://wa.me/5592992813253?text=${greeting()} Gostaria de falar com você sobre...`
     },
     {
       name: 'Github',
@@ -62,6 +62,20 @@ const Contacts = () => {
 
     alert(`'${texto}'` + ' copiado para a área de transferência!');
   }
+  function greeting(): string {
+    var time = new Date();
+    var hour = time.getHours();
+
+    if (hour > 20) {
+      return "Boa noite!"
+    }
+    else if (hour > 12) {
+      return "Boa tarde!"
+    }
+    else {
+      return "Bom dia!"
+    }
+  }
 
   return (
     <StyledSection>
@@ -78,9 +92,9 @@ const Contacts = () => {
             >
               <h1 id="form-title">
                 Me mande uma mensagem por
-                <a href="" onClick={() => copyText('paulomiguel11111971@gmail.com')}>
-                  <abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr>
-                </a>!
+                <b onClick={() => copyText('paulomiguel11111971@gmail.com')}>
+                  <abbr title="Copiar 'paulomiguel11111971@gmail.com' para a área de transferência">Email</abbr>
+                </b>!
               </h1>
               <input
                 onChange={(evt) => {
@@ -119,15 +133,15 @@ const Contacts = () => {
               </ContactOptions>
               <ContactButton
                 onClick={() => {
-                  if (userName === ""){
+                  if (userName === "") {
                     alert("Preencha o campo de nome");
                     return;
                   };
-                  if (userEmail === ""){
+                  if (userEmail === "") {
                     alert("Preencha o campo de email");
                     return;
                   };
-                  if (userMessage === ""){
+                  if (userMessage === "") {
                     alert("Preencha o campo de messagem");
                     return;
                   };
@@ -148,7 +162,7 @@ const Contacts = () => {
       </ContactContent>
       <div id="contact-message">
         <StyledH2>
-          Escreva uma mensagem para <a href="">paulomiguel11111971@gmail.com</a>
+          Escreva uma mensagem para <b onClick={() => copyText("paulomiguel11111971@gmail.com")}><abbr title="Copiar 'paulomiguel11111971@gmail.com' para a área de transferência">paulomiguel11111971@gmail.com</abbr></b>
         </StyledH2>
       </div>
     </StyledSection>

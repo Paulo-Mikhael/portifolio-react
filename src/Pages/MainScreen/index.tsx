@@ -22,9 +22,7 @@ const MainScreen = () => {
             <Destaque>Seu Projeto Realidade</Destaque>
           </h1>
           <p>
-            Faça websites íncriveis com a ajuda de meus serviços! Sou um
-            programador Front-End com conhecimentos em UI/UX design, pronto para
-            trabalhar!
+            Olá, estou pronto para colaborar com a criação e gerenciamento de APIs e sites usando as mais poderosas ferramentas de Front-End e Back-End
           </p>
         </div>
         <ContactButton

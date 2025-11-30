@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   width: 95%;
   height: 80%;
+  padding: 0px 0px 50px 0px;
   overflow: hidden scroll;
   position: relative;
   display: flex;

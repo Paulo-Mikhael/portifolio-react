@@ -68,7 +68,7 @@ const Header = () => {
               <h2>Paulo Miguel</h2>
             </div>
             <div className="line-two">
-              <p className="letter-spacing">Web Developer</p>
+              <p className="letter-spacing">Developer</p>
             </div>
           </PerfilMessage>
           <HeaderBar>
@@ -87,13 +87,11 @@ const Header = () => {
                 </Link>
               </h2>
             ))}
-            <abbr title="Mudar o idioma para português">
-              <img
-                src="Images/brazil.png"
-                alt="brazil flag button to change language"
-                id="header-image"
-              />
-            </abbr>
+            <img
+              src="Images/brazil.png"
+              alt="brazil flag button to change language"
+              id="header-image"
+            />
           </HeaderBar>
         </HeaderContent>
       </StyledHeader>

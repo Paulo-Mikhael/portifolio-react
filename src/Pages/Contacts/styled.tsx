@@ -70,11 +70,12 @@ export const FormContainer = styled.span`
             color: inherit;
             text-decoration: none;
           }
-          a{
+          b{
             text-decoration: none;
             color: #9b2626;
             margin-left: 7px;
             transition: all .2s;
+            cursor: pointer;
 
             &:hover{
               color: ${props => props.theme.colors.grayTwo};
@@ -191,7 +192,7 @@ export const StyledH2 = styled.h2`
   margin-bottom: 10px;
   gap: 7px;
 
-  a{
+  b > abbr{
     color: #9b2626;
     text-decoration: none;
     transition: all .2s;

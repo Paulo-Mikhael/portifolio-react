@@ -6,7 +6,6 @@ const AboutMe = () => {
       <SectionContent>
         <div className="perfil-photo">
           <img src="Images/perfil-photo.jpg" alt="foto de perfil" />
-          {/* <img src="Images/perfil-photoo.png" alt="foto de perfil" /> */}
         </div>
         <div className="about-me-message">
           <p className="letter-spacing" id="about-me-letter-spacing">
@@ -15,23 +14,10 @@ const AboutMe = () => {
           <h3 id="about-me-title">Olá! Me chamo Paulo Miguel</h3>
           <Line />
           <h4 id="about-me-text">
-            {/* Olá, meu nome é Paulo Miguel Bentes do Nascimento, tenho 18 anos, e,
-            durante a escola, sempre gostei de apresentar trabalhos em slides.
-            Essa atividade exige lógica, comunicação e criatividade para
-            resolver problemas, habilidades que valorizo e aprimoro. Sempre me
-            esforço para criar interfaces elogiadas e que gerem expectativa para
-            meus próximos projetos. Por isso, me vejo exclusivamente na
-            profissão de programador e sigo evoluindo como desenvolvedor front-end  */}
-            Me chamo Paulo Miguel Bentes do Nascimento, tenho 18 anos, sou de
-            Manaus/AM. Além das minhas habilidades técnicas em programação,
-            acredito que essa é uma área que requer muita lógica e comunicação,
-            não só para contribuir com um time, mas também para criar interfaces
-            que envolvam o usuário e transmitam a sensação desejada, por esse
-            motivo, eu também estudo UI e UX design para me desenvolver ainda
-            mais na programação web.
+            Me chamo Paulo Miguel Bentes do Nascimento, tenho 19 anos, sou de Manaus/AM. Por eu ter escolhido o desafio de entrar no mundo da programação, qualidades como comunicação e pensamento crítico são caracterísicas que estou sempre buscando evoluir, para eu poder colaborar com um time e atingir objetivos rapidamente, e além dessas minhas soft-skills, meu perfil curioso e criativo me permite estar sempre disposto a aprender e ter a mente aberta para diferentes ideias em um ambiente de trabalho. Estou sempre em busca de conhecimento e espero a cada dia melhorar para no futuro me tornar um ótimo profissional.
           </h4>
           <div className="abilities">
-            <h4>Habilidades Técnicas:</h4>
+            <h4>Habilidades:</h4>
             <span>
               <img
                 src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white"
@@ -66,11 +52,11 @@ const AboutMe = () => {
                 alt=""
               />
               <img
-                src="https://img.shields.io/badge/WordPress-21759B.svg?style=for-the-badge&logo=WordPress&logoColor=white"
+                src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"
                 alt=""
               />
               <img
-                src="https://img.shields.io/badge/Elementor-92003B.svg?style=for-the-badge&logo=Elementor&logoColor=white"
+                src="https://img.shields.io/badge/.NET-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white"
                 alt=""
               />
               <img

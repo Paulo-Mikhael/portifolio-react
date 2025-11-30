@@ -40,26 +40,6 @@ export const ProjectsData: IProjectCard[] = [
     projectImageTitle: 'Tela principal da aplicação "Blog PHLOX"',
   },
   {
-    name: "Dieta.AI",
-    type: "App Mobile",
-    description:
-      "A Dieta.AI é um app mobile para criação de dietas personalizadas, a aplicação funciona junto ao backend feito para ela, o qual consulta uma inteligência artificial para a geração de dietas, personalizando as refeições sugeridas com base no estilo de vida do usuário e seus dados pessoais, tais como a idade e gênero.",
-    linkToWeb:
-      "https://github.com/Paulo-Mikhael/dietaai-mobile?tab=readme-ov-file#readme",
-    linkToGithubReadme:
-      "https://github.com/Paulo-Mikhael/dietaai-mobile?tab=readme-ov-file#readme",
-    deviconTechnologiesClasses: [
-      "devicon-react-original",
-      "devicon-typescript-plain",
-      "devicon-axios-plain",
-    ],
-    projectImageUrl: "Images/dietaai-images.png",
-    projectImageAlt:
-      'Imagem de seis telas da aplicação "Dieta.AI" espalhadas como se fossem folhas de papel, e mais uma que mostra o ícone do app no workspace do android',
-    projectImageTitle:
-      'Imagens da aplicação "Dieta.AI" + Tela do workspace do android com o ícone do app',
-  },
-  {
     name: "in.orbit backend",
     type: "API",
     description:
@@ -78,26 +58,6 @@ export const ProjectsData: IProjectCard[] = [
     projectImageUrl: "Images/in-orbit-backend-images.png",
     projectImageAlt: "Imagem da documentação da API feita no swagger",
     projectImageTitle: "Documentação da API feita no swagger",
-  },
-  {
-    name: "Nutri+",
-    type: "Dashboard",
-    description:
-      "A Nutri+ é uma aplicação criada para ajudar o usuário a monitorar seus dados nutricionais, mostrando seu IMC, Taxa Metabólica Basal e consumo de água. Além disso, com base nos dados fornecidos, é criado um gráfico que mostra como deve ser seu consumo diário de calorias com base no objetivo escolhido.",
-    linkToWeb: "https://nutri-plus-xi.vercel.app",
-    linkToGithubReadme:
-      "https://github.com/Paulo-Mikhael/nutri-plus-dashboard?tab=readme-ov-file#readme",
-    deviconTechnologiesClasses: [
-      "devicon-react-original",
-      "devicon-nextjs-plain",
-      "devicon-typescript-plain",
-      "devicon-tailwindcss-original",
-    ],
-    projectImageUrl: "Images/dashboard-images.png",
-    projectImageAlt:
-      "Imagem de um gráfico mostrando dados nutricionais do usuário",
-    projectImageTitle:
-      "Tela da Nutri+ mostrando um gráfico que apresenta dados nutricionais do usuário e sua meta",
   },
   {
     name: "Fastask",
