@@ -8,7 +8,7 @@ import {
   StyledSection,
   ContactOptions
 } from "./styled.tsx";
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const Contacts = () => {
   const [emailSended, setEmailSended] = useState<boolean>(false);
