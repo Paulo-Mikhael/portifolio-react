@@ -1,9 +1,24 @@
 import styled from "styled-components"
 
 export const StyledSection = styled.section`
+  width: 100vw;
+  height: 100vh;
+
+  @media screen and (max-width: 1280px){
+    min-height: 100vh;
+    height: auto;
+  }
+`
+export const SectionContent = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 42px;
+  gap: 42px;
+  
   .about-me-message {
-    width: 75%;
-    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,44 +28,51 @@ export const StyledSection = styled.section`
       font-size: 18px;
     }
     .abilities {
-      span {
+      h3 {
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      ul {
         display: flex;
         gap: 5px;
         flex-wrap: wrap;
         margin: 10px 0px 20px 0px;
+
+        li {
+          list-style: none;
+        }
       }
     }
   }
-
-  @media screen and (max-width: 1280px){
-    min-height: 100vh;
-    height: auto;
-  }
-`
-export const SectionContent = styled.div`
-  width: 90%;
-  height: 85%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
   .perfil-photo {
-    width: 20%;
-    height: 80%;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     img {
-      min-width: 110%;
+      width: 400px;
       border-radius: 6px;
     }
   }
+  .about-me-subtitles {
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
 
   @media screen and (max-width: 1280px){
-    width: 90%;
     height: auto;
     align-items: start;
     margin-top: 130px;
+    flex-direction: column;
+
+    .perfil-photo {
+      display: none;
+    }
+
+    .about-me-subtitles {
+      text-align: center;
+    }
   }
 `
 export const Line = styled.div`
