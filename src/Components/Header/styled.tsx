@@ -28,7 +28,7 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 734px) {
+  @media screen and (max-width: 850px) {
     justify-content: right;
   }
 `;
@@ -55,7 +55,7 @@ export const PerfilMessage = styled.div`
     width: auto;
   }
 
-  @media screen and (max-width: 734px) {
+  @media screen and (max-width: 850px) {
     display: none;
   }
 `;
@@ -119,8 +119,9 @@ export const HeaderBar = styled.nav`
       }
     }
   }
-  abbr {
-    @media screen and (max-width: 1024px) {
+
+  @media screen and (max-width: 600px) {
+    img {
       display: none;
     }
   }
