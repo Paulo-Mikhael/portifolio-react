@@ -24,7 +24,7 @@ const Contacts = () => {
     {
       name: 'Whatsapp',
       classes: 'fa-brands fa-whatsapp',
-      path: `https://wa.me/5592992813253?text=${greeting()} Gostaria de falar com você sobre...`
+      path: `https://wa.me/5592992813253?text=${greeting()}, Gostaria de falar com você sobre...`
     },
     {
       name: 'Instagram',
@@ -39,7 +39,7 @@ const Contacts = () => {
     {
       name: 'Phone',
       classes: 'fa-solid fa-phone',
-      path: `https://wa.me/5592992813253?text=${greeting()} Gostaria de falar com você sobre...`
+      path: `https://wa.me/5592992813253?text=${greeting()}, Gostaria de falar com você sobre...`
     },
     {
       name: 'Github',
