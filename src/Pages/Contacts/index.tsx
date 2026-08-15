@@ -34,7 +34,7 @@ const Contacts = () => {
     {
       name: 'Linkedin',
       classes: 'fa-brands fa-linkedin-in',
-      path: 'https://www.linkedin.com/in/paulo-miguel-4b706022b/'
+      path: 'https://www.linkedin.com/in/paulo-miguel-bentes-do-nascimento-4b706022b/'
     },
     {
       name: 'Phone',
