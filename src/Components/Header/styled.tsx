@@ -112,10 +112,10 @@ export const HeaderBar = styled.nav`
     }
 
     @media screen and (max-width: 485px) {
-      font-size: 19px;
+      font-size: 16px;
 
       &.selected {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
