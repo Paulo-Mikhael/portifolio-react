@@ -44,11 +44,12 @@ export const StyledCard = styled.article`
   flex-direction: column;
 `;
 export const CardContainer = styled.div`
-  width: 90%;
-  height: 300px;
+  width: 95%;
+  min-height: 300px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 24px 0px;
 
   .cardText{
     height: 100%;
@@ -79,19 +80,22 @@ export const CardContainer = styled.div`
       width: 90%;
     }
   }
-  img{
-    width: 400px;
+  a {
 
-    @media screen and (max-width: 1280px) {
-      width: 350px;
-    }
-    @media screen and (max-width: 1024px) {
-      display: none;
+    img{
+      width: 400px;
+  
+      @media screen and (max-width: 1280px) {
+        width: 350px;
+      }
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 `;
 export const TechnologiesContainer = styled.div`
-  width: 90%;
+  width: 95%;
   height: auto;
   display: flex;
   gap: 10px;
