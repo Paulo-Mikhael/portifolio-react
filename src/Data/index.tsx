@@ -20,61 +20,60 @@ export const ProjectsData: IProjectCard[] = [
     projectImageTitle: 'Telas da aplicação "CINE NIGHTLY"',
   },
   {
-    name: "Blog PHLOX",
-    type: "Blog",
+    name: "API para blogs",
+    type: "API RESTful",
     description:
-      "Este projeto é um blog de uma empresa fictícia de tecnologia, onde além da própria poder postar o conteúdo da loja, também funciona como uma rede social onde os clientes podem interagir se tiverem uma conta.",
-    linkToWeb: "https://phlox-blog.vercel.app/",
+      "Uma api para aplicações que precisam gerenciar usuários e posts, possui um sistema completo de cadastro, onde é possível gerenciar o usuário atual por meio de token JWT, fazer login e encerrar sessão. Além disso, é possível um usuário redefinir a senha através de um código enviado por email. A API foi estruturadada com tratamento de erros, verificação de tokens JWT, gerenciamento de cookies, armazenamento local de arquivos e design pattern MVC.",
+    linkToWeb: "https://github.com/Paulo-Mikhael/blog-api?tab=readme-ov-file",
     linkToGithubReadme:
-      "https://github.com/Paulo-Mikhael/phlox-blog?tab=readme-ov-file#readme",
+      "https://github.com/Paulo-Mikhael/blog-api?tab=readme-ov-file",
     deviconTechnologiesClasses: [
-      "devicon-react-original",
-      "devicon-vitejs-plain",
-      "devicon-typescript-plain",
-      "devicon-tailwindcss-original",
-      "devicon-reactrouter-plain",
-    ],
-    projectImageUrl: "Images/phlox-blog-images.png",
-    projectImageAlt:
-      'Imagem de cinco telas da aplicação "Blog PHLOX" espalhadas como se fossem folhas de papel',
-    projectImageTitle: 'Tela principal da aplicação "Blog PHLOX"',
-  },
-  {
-    name: "in.orbit backend",
-    type: "API",
-    description:
-      "Este é o servidor de uma aplicação chamada in.orbit, responsável por guardar e gerenciar as metas do usuário, elas são armazenadas em um banco de dados postgresql por um container docker e gerenciadas pelo framework back-end fastify.",
-    linkToWeb:
-      "https://github.com/Paulo-Mikhael/in-orbit-backend?tab=readme-ov-file#readme",
-    linkToGithubReadme:
-      "https://github.com/Paulo-Mikhael/in-orbit-backend?tab=readme-ov-file#readme",
-    deviconTechnologiesClasses: [
-      "devicon-nodejs-plain-wordmark",
+      "devicon-nodejs-plain",
       "devicon-typescript-plain",
       "devicon-fastify-plain",
-      "devicon-docker-plain",
-      "devicon-postgresql-plain",
+      "devicon-prisma-original"
     ],
-    projectImageUrl: "Images/in-orbit-backend-images.png",
-    projectImageAlt: "Imagem da documentação da API feita no swagger",
-    projectImageTitle: "Documentação da API feita no swagger",
+    projectImageUrl: "Images/blog-api-image.png",
+    projectImageAlt:
+      'Imagem da aplicação de "API para blogs"',
+    projectImageTitle: 'Telas da aplicação "API para blogs"',
   },
   {
-    name: "Fastask",
-    type: "Aplicação Web",
+    name: "Barbershop",
+    type: "Plataforma de Agendamento (Em Progresso)",
     description:
-      "A Fastask é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.",
-    linkToWeb: "https://paulo-mikhael.github.io/fastask/",
+      "Projeto Full-Stack (em desenvolvimento) onde usuários poderão chegar no site de uma barbearia e agendarem horários, onde os clientes logados no sistema poderão contar com um perfil e obter informações sobre seus agendamentos, pagamentos ou preferências. Além das funcionalidades ao cliente, serão implementadas duas páginas administrativas, uma com controle total da barbearia para os donos, e outra com uma visão geral dos clientes e seus agendamentos para os funcionários.",
+    linkToWeb: "https://github.com/Paulo-Mikhael/barbershop?tab=readme-ov-file",
     linkToGithubReadme:
-      "https://github.com/Paulo-Mikhael/fastask?tab=readme-ov-file#readme",
+      "https://github.com/Paulo-Mikhael/barbershop?tab=readme-ov-file",
     deviconTechnologiesClasses: [
-      "devicon-html5-plain",
-      "devicon-css3-plain",
-      "devicon-javascript-plain",
+      "devicon-nextjs-plain",
+      "devicon-tailwindcss-original",
+      "devicon-typescript-plain",
     ],
-    projectImageUrl: "Images/fastask-images.png",
+    projectImageUrl: "Images/barbershop-images.png",
     projectImageAlt:
-      'Imagem de uma tela da aplicação "Fastask" espalhada como se fosse uma folha de papel',
-    projectImageTitle: 'Telas da aplicação "PHLOX"',
+      'Imagem de duas telas da aplicação "Barbershop" espalhadas como se fossem folhas de papel',
+    projectImageTitle: 'Telas da aplicação "Barbershop"',
+  },
+  {
+    name: "XWriter",
+    type: "Plataforma de Posts",
+    description:
+      "Aplicação criada para cadastro de usuários e compartilhamento de posts, integrado ao serviço back-end Firebase, o projeto armazena as informações em um banco de dados de tempo real. Desenvolvido durante o desafio 7 Days of Code da Alura.",
+    linkToWeb: "https://xwriter.vercel.app/",
+    linkToGithubReadme:
+      "https://github.com/Paulo-Mikhael/XWriter?tab=readme-ov-file",
+    deviconTechnologiesClasses: [
+      "devicon-react-original",
+      "devicon-tailwindcss-original",
+      "devicon-reactrouter-plain",
+      "devicon-typescript-plain",
+      "devicon-firebase-plain"
+    ],
+    projectImageUrl: "Images/xwriter-images.png",
+    projectImageAlt:
+      'Imagem de duas telas da aplicação "XWriter" espalhadas como se fossem folhas de papel',
+    projectImageTitle: 'Telas da aplicação "XWriter"',
   },
 ];
