@@ -63,7 +63,6 @@ export const SectionContent = styled.div`
   @media screen and (max-width: 1280px){
     height: auto;
     align-items: start;
-    margin-top: 130px;
     flex-direction: column;
 
     .perfil-photo {
